@@ -1,0 +1,58 @@
+/* Main container */
+.app-container {
+  min-height: 100vh;
+  background-color: #f7fafc; /* Light gray background */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header section */
+.header {
+  background-color: #9f39b1; /* Purple background */
+  color: white;
+  padding: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Ensure header spans the full width */
+  box-sizing: border-box; /* Include padding in the total width calculation */
+  margin-top: 45px;
+}
+
+/* Ensure parent containers don't limit the width of nav */
+.header, .container {
+  width: 100%;
+  max-width: none; /* Disable max-width */
+}
+
+.header-title {
+  font-size: 2.3rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Main content section */
+.main-content {
+  flex-grow: 1;
+  padding: 24px;
+  margin: 0 auto;
+  width: 100%; /* Ensure content spans the full width */
+}
+
+/* Footer section */
+.footer {
+  background-color: #2d3748; /* Dark gray background */
+  color: white;
+  padding: 16px;
+  margin-top: 16px;
+}
+
+.footer-container {
+  text-align: center;
+}
+
+/* Optional: Additional Styling for Containers */
+.container {
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%; /* Make the container span the full width */
+}

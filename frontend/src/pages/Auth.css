@@ -1,0 +1,92 @@
+/* Auth container */
+.auth-container {
+    padding: 24px;
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #f7fafc; /* Light background color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 50px;
+}
+
+/* Auth title */
+.auth-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #9f39b1; /* Primary color */
+    margin-bottom: 30px;
+    margin-top: -20px;
+}
+
+/* Auth form */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Input fields */
+.auth-input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Button */
+.auth-btn {
+    background-color: #9f39b1;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.auth-btn:hover {
+    background-color: #7b2792;
+}
+
+/* Register link */
+.auth-link {
+    text-align: center;
+    font-size: 1rem;
+}
+
+.auth-link a {
+    color: #9f39b1;
+    text-decoration: none;
+}
+
+.auth-link a:hover {
+    text-decoration: underline;
+}
+
+/* Welcome message */
+.welcome-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.welcome-container p {
+    font-size: 1.5rem;
+    color: #333; /* Darker color for the username */
+}
+
+/* Logout button */
+.logout-btn {
+    background-color: #e74c3c; /* Red color for logout */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.logout-btn:hover {
+    background-color: #c0392b; /* Darker red for hover */
+}
