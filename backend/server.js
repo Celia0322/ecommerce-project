@@ -48,3 +48,7 @@ app.post("/api/checkout", async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
+const errorHandler = require('./middleware/errorHandler');
+app.use(errorHandler);
+
