@@ -1,62 +1,78 @@
-/* Product.css */
-
 /* Product container */
 .product-container {
-    padding: 24px;
-    max-width: 900px;
-    margin: 0 auto;
-    background-color: #f7fafc; /* Light background color */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    margin-top: 50px;
-  }
-  
-  /* Product details */
-  .product-details {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  /* Product title */
-  .product-title {
-    font-size: 2rem;
-    color: #9f39b1; /* Primary color */
-    margin-bottom: 30px;
-    margin-top: -20px;
-    text-align: center;
-  }
-  
-  /* Product price */
-  .product-price {
-    font-size: 1.5rem;
-    color: #333;
-    text-align: center;
-  }
-  
-  /* Product description */
-  .product-description {
-    font-size: 1rem;
-    color: #555;
-    text-align: center;
-    line-height: 1.6;
-  }
-  
-  /* Add to Cart button */
-  .add-to-cart-btn {
-    background-color: #9f39b1;
-    color: white;
-    padding: 12px 24px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    width: 200px;
-    margin: 0 auto;
-    display: block;
-    font-size: 1rem;
-  }
-  
-  .add-to-cart-btn:hover {
-    background-color: #7b2792;
-  }
-  
+  padding: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #f7fafc; /* Light background color */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-top: 50px;
+}
+
+/* Product details */
+.product-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center; /* Center content horizontally */
+}
+
+/* Product title */
+.product-title {
+  font-size: 2rem;
+  color: #9f39b1; /* Primary color */
+  margin-bottom: 30px;
+  margin-top: -20px;
+  text-align: center;
+}
+
+/* Product price */
+.product-price {
+  font-size: 1.5rem;
+  color: #333;
+  text-align: center;
+}
+
+/* Product description */
+.product-description {
+  font-size: 1rem;
+  color: #555;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* Add to Cart button */
+.add-to-cart-btn {
+  background-color: #9f39b1;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  width: 200px;
+  margin: 0 auto;
+  display: block;
+  font-size: 1rem;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #7b2792;
+}
+
+/* Product image container for the single product page */
+.product-image-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+/* Product image styling for full view */
+.product-image {
+  max-width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the entire image is shown */
+  max-height: 500px; /* Limit the max height to avoid overflow */
+}
+
+
+

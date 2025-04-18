@@ -8,7 +8,7 @@ const Product = () => {
   const { id } = useParams();
   const { addToCart } = useContext(CartContext);
   const [product, setProduct] = useState(null);
-  const [showSuccessMessage, setShowSuccessMessage] = useState(false); // New state for success message
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
   useEffect(() => {
     axios.get(`http://localhost:5001/products/${id}`)
@@ -17,11 +17,9 @@ const Product = () => {
   }, [id]);
 
   const handleAddToCart = (product) => {
-    addToCart(product); // Add the product to cart
-    setShowSuccessMessage(true); // Show success message
-    setTimeout(() => {
-      setShowSuccessMessage(false); // Hide the success message after 3 seconds
-    }, 3000);
+    addToCart(product);
+    setShowSuccessMessage(true);
+    setTimeout(() => setShowSuccessMessage(false), 3000);
   };
 
   return (
@@ -29,21 +27,39 @@ const Product = () => {
       {product ? (
         <div className="product-details">
           <h1 className="product-title">{product.name}</h1>
+
+          {/* Image Display */}
+          <img
+            src={product.imageUrl.startsWith("http") ? product.imageUrl : `${process.env.PUBLIC_URL}${product.imageUrl}`}
+            alt={product.name}
+            className="product-image"
+            style={{ maxWidth: '400px', marginBottom: '20px' }}
+          />
+
           <p className="product-price">Price: ${product.price}</p>
           <p className="product-description">{product.description}</p>
+
           <button className="add-to-cart-btn" onClick={() => handleAddToCart(product)}>
             Add to Cart
           </button>
+
           {showSuccessMessage && (
-            <div className="success-message">Item successfully added to the cart!</div> // Success message display
+            <div className="success-message">Item successfully added to the cart!</div>
           )}
         </div>
-      ) : <p>Loading...</p>}
+      ) : (
+        <p>Loading...</p>
+      )}
     </div>
   );
 };
 
 export default Product;
+
+
+
+
+
 
 
 
