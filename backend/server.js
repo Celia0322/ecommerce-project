@@ -6,6 +6,10 @@ const cors = require('cors');
 // Import Routes
 const productRoutes = require('./routes/productRoutes'); // Import product routes
 const authRoutes = require("./routes/authRoutes"); // Import authentication routes
+//const orderRoutes = require('./routes/orderRoutes'); // Import order routes
+
+// Import Middleware
+//const authMiddleware = require('./middleware/authMiddleware'); // Import auth middleware
 
 const app = express();
 const PORT = process.env.PORT || 5001;
@@ -24,6 +28,9 @@ app.use('/products', productRoutes); // Use product routes
 
 // Define authentication routes
 app.use("/auth", authRoutes); // Register authentication routes (register/login)
+
+// Protect order routes with authentication middleware
+//app.use("/orders", authMiddleware, orderRoutes); // Apply authMiddleware to order routes
 
 // Define a simple route
 app.get('/', (req, res) => {
@@ -49,6 +56,7 @@ app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
 
+// Error handling middleware
 const errorHandler = require('./middleware/errorHandler');
 app.use(errorHandler);
 
